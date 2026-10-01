@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kushal | Student & Footballer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #020617;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #020617;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
+
+        /* About */
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about p {
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #1e293b;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            background: #334155;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .skill-card p {
+            color: #94a3b8;
+        }
+
+        /* Football Section */
+        .football {
+            background: #020617;
+            text-align: center;
+        }
+
+        .football p {
+            max-width: 800px;
+            margin: auto;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        .football-icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        /* Education */
+        .education-card {
+            max-width: 700px;
+            margin: auto;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .education-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            background: #020617;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #020617;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Kushal</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#football">Football</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm <span>Kushal</span></h1>
+
+            <h2>Engineering Student | Footballer ⚽</h2>
+
+            <p>
+                I am a student at JAIN Institute of Technology, Davangere.
+                I am passionate about technology, coding, football,
+                fitness and learning new things.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                Hello! I'm Kushal, an engineering student at
+                JAIN Institute of Technology, Davangere.
+                I am interested in technology and software development.
+                Outside academics, I am a footballer and enjoy playing
+                football, improving my fitness and developing my skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-card">
+
+            <h3>JAIN Institute of Technology</h3>
+
+            <p>
+                Davangere, Karnataka
+            </p>
+
+            <p>
+                Engineering Student
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Learning programming and software development.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS and JavaScript.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Problem Solving</h3>
+                <p>Interested in solving technical problems.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Football</h3>
+                <p>Passionate football player and sports enthusiast.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Football Section -->
+    <section class="football" id="football">
+
+        <div class="football-icon">⚽</div>
+
+        <h2>Football</h2>
+
+        <p>
+            Football is one of my biggest passions.
+            I enjoy playing the game, improving my fitness,
+            working on my skills and competing with other players.
+            My goal is to become faster, stronger and a better
+            footballer every day.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            Interested in connecting with me?
+        </p>
+
+        <a href="mailto:your-email@example.com" class="btn">
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Kushal. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
